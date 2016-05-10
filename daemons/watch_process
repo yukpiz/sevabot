@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd /var/bot/sevabot/daemons
+screen -AmdS watch_process python watch_process.py
