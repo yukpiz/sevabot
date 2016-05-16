@@ -5,5 +5,5 @@ import commands
 
 progname = 'ps'
 
-output = commands.getoutput('ps aux | grep minecraft')
+output = commands.getoutput('ps aux | grep pink_minecraft')
 print output

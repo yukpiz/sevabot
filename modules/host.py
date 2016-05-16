@@ -5,4 +5,5 @@ import commands
 
 progname = 'host'
 
-print 'minecraft.yukpiz.me:25255'
+print 'ぴんくくらふと: minecraft.yukpiz.me:25255'
+print 'ラボサーバー: minecraft.yukpiz.me:25256'

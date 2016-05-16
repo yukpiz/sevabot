@@ -21,7 +21,7 @@ st_results = os.stat(filename)
 st_size = st_results[ST_SIZE]
 file.seek(st_size)
 
-commands.getoutput('screen -S minecraft -X stuff \'%s\n\'' % command)
+commands.getoutput('screen -S pink_minecraft -X stuff \'%s\n\'' % command)
 
 time.sleep(3)
 
