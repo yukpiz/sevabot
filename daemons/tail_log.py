@@ -18,6 +18,8 @@ uuid_aliases = {
     "ruxu_fox": ["ルゥさん"],
     "hagetaka3": ["はーげん", "ちゃんはげ"],
     "dearuma": ["ひなちゃん", "ちゃんひな"],
+    "siroyancic": ["しろやん", "えろやん"],
+    "kudrjavka": ["めるさん"],
 }
 
 filename = '/var/minecraft/pink-server/logs/latest.log'
@@ -51,9 +53,9 @@ def parse(line):
 
 def tail_f(usec):
     msec = usec / 1000
+    os.environ['DISPLAY'] = ':1'
 
     while 1:
-        os.environ['DISPLAY'] = ':1'
         file = init(filename)
         fpos = file.tell()
         line = file.readline()
