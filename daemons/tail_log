@@ -1,4 +1,0 @@
-#!/bin/sh
-
-cd /var/bot/sevabot/daemons
-screen -AmdS tail_log python tail_log.py
