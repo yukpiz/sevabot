@@ -49,17 +49,12 @@ def parse(line):
         left_handler(room, match[0])
 
 
-def tail_f(file, usec):
+def tail_f(usec):
     msec = usec / 1000
-    prev_day = datetime.datetime.today().day
 
     while 1:
-        now_day = datetime.datetime.today().day
-        if prev_day != now_day:
-            prev_day = now_day
-            file.close()
-            file = init(filename)
         os.environ['DISPLAY'] = ':1'
+        file = init(filename)
         fpos = file.tell()
         line = file.readline()
         if not line:
@@ -68,7 +63,8 @@ def tail_f(file, usec):
         else:
             print line
             parse(line)
-    file.close()
+
+        file.close()
     pass
 
 
@@ -76,5 +72,4 @@ if __name__ == '__main__':
     skype_connection = SkypeConnection()
     skype = skype_connection.init_skype()
     room = skype_connection.get_room(skype)
-    file = init(filename)
-    tail_f(file, 500)
+    tail_f(500)
