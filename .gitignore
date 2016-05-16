@@ -62,6 +62,6 @@ logs/*
 *.tmp
 custom/*
 
-./modules/host.py
-./daemons/tail_log.py
-./daemons/tail_log
+modules/host.py
+daemons/tail_log.py
+daemons/tail_log
