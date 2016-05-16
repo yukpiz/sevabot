@@ -5,12 +5,12 @@ from skype import SkypeConnection
 import commands
 
 def watch_process(room):
-    command = 'ps aux | grep minecraft | grep -v grep'
+    command = 'ps aux | grep pink_minecraft | grep -v grep'
     output = commands.getoutput(command)
     runned = True if output else False
 
     while 1:
-        output = commands.getoutput('ps aux | grep minecraft | grep -v grep')
+        output = commands.getoutput(command)
         tmp = True if output else False
         if tmp == runned: continue
         runned = tmp
