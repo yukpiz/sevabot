@@ -16,10 +16,10 @@ def watch_process(room):
         runned = tmp
         if runned:
             print 'Startup of Pink Server.'
-            room.SendMessage('ぴんくくらふとサーバーが起動します。')
+            room.SendMessage('ぴんくくらふとサーバーが起動したよ！')
         else:
             print 'Stopping of Pink Server.'
-            room.SendMessage('ぴんくくらふとサーバーが停止します。')
+            room.SendMessage('ぴんくくらふとサーバーが停止したよ！')
 
 if __name__ == '__main__':
     skype_connection = SkypeConnection()
